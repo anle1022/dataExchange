@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="gz.jszx.dao.mybatis.MybatisDao">
+	
+	<select id="mybatisTest" resultType="Test">
+		select * from bdc_qh_test
+	</select>
+	
+	<select id="getTestString" resultType="Test">
+		select * from bdc_qh_test
+	</select>
+	
+	<insert id="addTest" >
+		insert into bdc_qh_test (id,key,value) values ('3','3','3') 
+	</insert>
+	<select id="findOa2SysdicById" parameterType="Long" resultType="gz.jszx.entity.Oa2Sysdic">
+		select * from oa2_sysdic where sd_oid=#{id}
+	</select>
+</mapper>

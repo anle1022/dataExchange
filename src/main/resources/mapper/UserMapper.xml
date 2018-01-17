@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="gz.jszx.dao.mybatis.UserMytaisDao">
+
+	<insert id="addUserByMyBatis" parameterType="gz.jszx.entity.BdcUser">
+		insert into BDC_USER values(#{unitno,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR}) 
+	</insert>
+</mapper>
